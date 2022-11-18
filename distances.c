@@ -134,7 +134,7 @@ int main(int argc, char *argv[]) {
     /* #pragma omp parallel for schedule(dynamic) reduction(+:count_close) */
     for (size_t ix=0; ix<rows_in_file*3; ix+=3) {
 	jx = ix+3;
-	while(points[jx+1] - points[ix+1] < 0.05f && jx < rows_in_file*3)
+	while(points[jx] - points[ix] < 0.05f && jx < rows_in_file*3)
 	{
 	    //Partially unrolling loop to get multiple of 4 of the operations, which allowed for vectorization on my CPU.
 	    dx1=points[ix+0]-points[jx+0 ];
