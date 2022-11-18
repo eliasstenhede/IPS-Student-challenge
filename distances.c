@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 /* #include <omp.h> */
-#include <time.h>
-#include <math.h>
+
+
 
 // counts the number of lines in the input file
 int countRows(FILE *fp) {
